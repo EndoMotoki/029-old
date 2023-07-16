@@ -2,9 +2,6 @@ import {createServerComponentClient} from "@supabase/auth-helpers-nextjs";
 import {cookies} from "next/headers";
 import React from "react";
 import Link from 'next/link'
-import {supabase} from "@/supabase";
-import {equal} from "assert";
-import {text} from "stream/consumers";
 
 export default async function Index() {
     const supabase = createServerComponentClient({cookies});

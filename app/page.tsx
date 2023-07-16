@@ -2,9 +2,6 @@ import {createServerComponentClient} from "@supabase/auth-helpers-nextjs";
 import {cookies} from "next/headers";
 import React from "react";
 import Link from 'next/link'
-import {supabase} from "@/supabase";
-import {equal} from "assert";
-import {text} from "stream/consumers";
 
 export default async function Index() {
     const supabase = createServerComponentClient({cookies});
@@ -44,28 +41,28 @@ export default async function Index() {
 
 
             <div className="w-100">
-                <Link href="/menu?type=gyudon">
+                <Link href="menu?type=gyudon">
                     <button
                         type="button"
                         className="block w-full cursclassNameinter rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
                         牛丼
                     </button>
                 </Link>
-                {/*<Link href="/menu?type=don">*/}
-                {/*    <button*/}
-                {/*        type="button"*/}
-                {/*        className="block w-full cursclassNameinter rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">*/}
-                {/*        丼*/}
-                {/*    </button>*/}
-                {/*</Link>*/}
-                <Link href="/menu?type=karaage">
+                <Link href="menu?type=don">
+                    <button
+                        type="button"
+                        className="block w-full cursclassNameinter rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
+                        丼
+                    </button>
+                </Link>
+                <Link href="menu?type=karaage">
                     <button
                         type="button"
                         className="block w-full cursclassNameinter rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
                         から揚げ
                     </button>
                 </Link>
-                <Link href="/menu?type=teisyoku">
+                <Link href="menu?type=teisyoku">
                     <button
                         type="button"
                         className="block w-full cursclassNameinter rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
